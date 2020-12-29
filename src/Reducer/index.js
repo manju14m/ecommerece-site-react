@@ -7,7 +7,7 @@ export default function Reducer(state,action){
         case "Add_to_cart":
 
         let temparr = state.cart.map(item => item.id)
-            console.log(`temparr ${temparr}`)
+            // console.log(`temparr ${temparr}`)
 
         if (temparr.includes(action.payload.id)){
             // console.log("item present")

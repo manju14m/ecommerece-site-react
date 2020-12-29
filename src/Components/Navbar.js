@@ -21,11 +21,16 @@ function NavBar({totalItems,cart,dispatch}){
     
 
     const totalitems = () =>(
-        {
+       dispatch( {
             type:"Total_Items"
             
-        }
+        })
     )
+
+    // (function () {
+    //     dispatch(totalitems())
+    //     console.log("invoke")
+    //   })();
 
         const filter = (tag) =>(
             {
@@ -35,20 +40,31 @@ function NavBar({totalItems,cart,dispatch}){
             }
         )
 
-
+// window.onload(console.log("hello"))
     useEffect(()=>{
         // console.log("useeffect")
-        dispatch(totalitems())
+        dispatch(totalitems());
         // console.log("dispatched")
-    },[cart])
+        // dispatch( {
+        //     type:"Total_Items"
+            
+        // })
 
+    })
 
+    // useCallback(
+    //     () => {
+    //       console.log("callback")
+    //     },
+        
+    //   );
 
 
     return(
         <div className="navbar navbar-expand-sm bg-info d-flex justify-content-around fixed-top">
            
             <div style={{"width":"30%"}} className="d-flex justify-content-around">
+                
                 
                 <NavLink to="/main" className="nav-link text-white"><img src={logo} alt = "my logo" height="50px" width="50px" className = "rounded" /></NavLink>
             </div>
