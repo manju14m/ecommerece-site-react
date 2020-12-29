@@ -1,5 +1,4 @@
-# Live link
-# manju-shopify.netlify.app
+# Live link  https://manju-shopify.netlify.app/
 
 # Getting Started with Create React App
 
